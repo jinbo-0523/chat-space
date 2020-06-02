@@ -1,1 +1,16 @@
-＜チャット画面＞
+.chat-main
+  .main-header
+    .main-header__leftbox
+      %h2.main-header__leftbox_current-group
+        %ul.main-header__leftbox__member-list
+          %li.main-header__left-box__member-list__member
+      %li.main-header__edit-btn
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+        %p.message__upper-info__date
+      %p.message__text
+
+  .form
+    %form.new_message

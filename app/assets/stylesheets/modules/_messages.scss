@@ -1,3 +1,49 @@
 * {
   box-sizing: border-box;
 }
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+.side-header{
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+  //&__box{
+
+    //&__menu{
+    //&__new-group{
+    //}
+    //&__edit-user{
+    //}
+    //}
+  //}
+}
+
+.chat-main{
+  background-color: #fafafa;
+  width: calc(100vw - 300px);
+  height: 100vh;
+
+
+  .main-header{
+    background-color: #ffffff;
+    height: 100px;
+    //&__leftbox
+      //&__leftbox_current-group
+      //&__member-list
+        //&__member
+    //&__edit-btn
+  }
+
+  .messages{
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 90px);
+  }
+
+  .form{
+    background-color: #d2d2d2;
+    height: 90px;
+    display: block;
+  }
+}

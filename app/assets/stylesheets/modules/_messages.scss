@@ -8,8 +8,9 @@
 .side-header{
   background-color: #253141;
   width: 300px;
-  height: 100vh;
-  //&__box{
+  height: 100px;
+  display: flex;
+    //&__box{
 
     //&__menu{
     //&__new-group{
@@ -17,10 +18,17 @@
     //&__edit-user{
     //}
     //}
+  
+
   //}
 }
 
-.chat-main{
+.groups{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+  }
+
+  .chat-main{
   background-color: #fafafa;
   width: calc(100vw - 300px);
   height: 100vh;

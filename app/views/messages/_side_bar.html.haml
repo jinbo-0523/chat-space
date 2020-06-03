@@ -1,10 +1,21 @@
 .chat-side
   .side-header
     .side-header__box
-      %p.sidebox__header__box__user-name
-      %ul.side-header__box__menu
-        %li.side-header__box__menu__new-group
-        %li.side-header__box__menu__edit-user
+      .sidebox__header__box__user-name
+        神保
+      .side-header__box__menu
+        = link_to"#" do
+          = icon('fas', 'edit', class: "side-header__box__menu__new-group")
+        
+        = link_to"#" do
+          = icon('fas', 'cog', class: "side-header__box__menu__edit-user")
   .groups
-    %p.group__group-name
-    %p.group__latest-message
+    %p.group__group-name 76
+    %p.group__latest-message まだメッセージはありません
+
+    -# <i class="far fa-edit"></i>グループ新規マーク
+    -# <i class="fas fa-cog"></i>アカウント編集マーク
+    -# <i class="fab fa-facebook-square"></i>Facebookマーク
+
+    -# = link_to "#", class: i do
+      -#  %i.side-header__box__menu__new-group far fa-edit

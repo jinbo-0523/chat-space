@@ -26,14 +26,14 @@
 
       &__user-name{
         font-size: 16px;
-        font-weight: bold;
+        font-weight: 900;
       }
 
       &__menu{
-      display: flex;
-      
-      height: 20px;
-      color: white;
+        display: flex;
+        height: 20px;
+        color: white;
+          font-size: 0.9em;
         &__new-group{
           color: white;
         }
@@ -50,9 +50,20 @@
 
 
 .groups{
-    height: calc(100vh - 100px);
-    background-color: #2f3e51;
-  }
+  height: calc(100vh - 100px);
+  background-color: #2f3e51;
+  padding: 20px 20px 20px;
+    &__box{
+      height: 65px;
+      &__group-name{
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      &__latest-message{
+        font-size: 11px;
+      }
+    }
+}
 
 .chat-main{
   background-color: #fafafa;

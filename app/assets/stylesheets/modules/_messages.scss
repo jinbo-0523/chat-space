@@ -150,11 +150,9 @@
     }
     .new_message{
       display: flex;
-      // padding: 10px 10px;
         justify-content: space-between;
 
       .input-box{
-        // height: 50px;
         display: flex;
         position: relative;
         width: calc(100vw - 480x);

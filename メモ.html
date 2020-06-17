@@ -23,3 +23,43 @@ L-9-③
   問題4._main_chat.html.hamlのform以下の書き換え方がわからない
 
 text_field
+
+L９ー⑧
+課題１
+入れるgem development、test
+  develop、test
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+
+  bundle install
+
+  rails g rspec:install
+.rspecに
+  --format documentation追記
+rails_helper.rbに追記
+  config.include FactoryBot::Syntax::Methods
+  これでFactoryBotという記述を省略することができる
+ファイルを作る
+spec
+  controllers
+  factories
+    messages.rb       個々に定義？仮作成？
+    users.rb
+    groups.rb         ３つともFaker::を使う(FakerのREADMEを参照)
+  models
+    messages_spec.rb  テストコード記述
+
+
+？？？
+ groupsでname {Faker::Team.name}になった理由はなんで？？？
+
+ RSpec.describe Message, type: :model do
+ なんでRSpecが先頭にくる？
+
+ context "messageがあれば保存できる" do
+ このcontextはどこから現れた？
+
+ botではなぜgroupとuserに_idがつかないのか
+ 
+ 

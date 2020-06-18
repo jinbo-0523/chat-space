@@ -63,3 +63,35 @@ spec
  botではなぜgroupとuserに_idがつかないのか
  
  
+ L-10-④  非同期通信
+ $('#new_message').on('submit', function(e){
+フォーム全体の事だからnew_mesage text_fieldのmessage_contentではない
+
+attr→要素が持つ指定属性の値を返す
+action属性に格納   form属性の中のaction属性にurlが入っている
+new FormData???  オブジェクト。formに入ったデータのこと。引数とると引数の中のデータ
+formData→フォームのデータの送信に使用。
+ajax({})→非同期JS XML→→非同期で表示します、({})以下を
+
+問題４   jbuilderファイルの作成
+json.created_at @message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+strftime - 日付および時刻の文字列への変換 
+pictweetはなぜ配列型？array!？にする事になった？
+messageテーブル見たのになんで返す値がこんなに少ないのか？？
+→テーブルに入れたいデータじゃなくて画面に表示させたいデータだけ
+ 受け取れればいいから少なくなる。
+
+$('form')[0].reset();
+→resetメソッド使用：初期値にするメソッド。JSのメソッドだから[0]が必要
+animateメソッド
+→これを使ったオブジェクトを徐々に変化させられるメソッド
+scrollTop
+→jQueryのメソッドで、指定した値の分だけanimateメソッドを利用した要素をスクロール
+ 例：投稿した分だけ下にスクロールする  みたいな
+
+ 連投できない問題
+ピクツイでこれ → $('.form__submit').prop('disabled', false)
+               <%= form.submit "SEND" %>
+               .prop 指定した属性の値を取得します。
+
+試した         submit＿btn、submit、、、

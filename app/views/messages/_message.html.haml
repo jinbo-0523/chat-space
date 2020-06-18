@@ -10,11 +10,4 @@
     %p.lower-message__content
       = message.content
   = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
--# .form
--#   = form_with model: [@group, @message], html:{class:"new_message"}, local:true do |f|
--#     .input-box
--#       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
--#         = f.label :image, class: 'input-box__image' do
--#           = icon('fas', 'image', class: 'icon')
--#           = f.file_field :image, class: 'input-box__image__file'
--#       = f.submit 'Send', class: 'submit-btn'
+

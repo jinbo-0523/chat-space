@@ -101,3 +101,71 @@ scrollTop
   $(".submit-btn").prop('disabled', false);
 })
 何かアクションするたびに毎回btnを押せるようになる
+
+L-10-⑤  インクリメントサーチ
+イベント発火・・・$('     ').click(function()とか.on("kayup", function()とか
+フォーム値取得・・・.val() → TMLタグ内に記述されているvalue属性を取得したり変更することができるメソッド
+
+問題３
+以下の部分のコードが全く読めない
+return nil if params[:keyword] == ""
+    @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
+    ==     →「等しい」
+.where     → 「与えられた条件にマッチするレコードをすべて返す」
+.limit(10) → 最大で１０こ
+LIKEは？なに？
+モデルクラス.where("列名 LIKE ?", "%値%")  # 値(文字列)を含む
+
+5~7.
+テンプレートリテラル（｀｀）内で変数を使う方法
+→${}
+jbuilderから送られてきた配列データの各要素に対して、一度ずつ呼び出す方法
+→array!
+forEach文の使い方
+→与えられた関数を配列に含まれる各要素に対して一度ずつ呼び出す。
+empty メソッド
+→指定したDOM要素の子要素のみを削除するメソッド
+forEach メソッド
+→forEachは、与えられた関数を配列に含まれる各要素に対して一度ずつ呼び出します。
+”一致するツイートがありません”という引数を与え、appendErrMsgToHTML関数を呼び出します。
+
+問題4 コピペだけすると...
+メンバーの追加ができない。ボタンはあるけどアクションできない
+5~7の各確認の仕方および解決
+5~7の各確認の仕方および解決
+①Ajaxの通信の処理が正しく行われ、値がdoneで引数として受け取れているかどうかを、console.logで確かめる
+.done(function(users) {の下にconsole.log(this)
+{url: "/users?keyword=y", type: "GET", isLocal: false, global: true, processData: true, …}
+
+②console.log(html)で表示されるhtmlが意図するものになっているか、確認
+→function addUser(user) { の下にconsole.log(html)をかます
+エラーUncaught ReferenceError: Cannot access 'html' before initialization
+定義する前に確認はできないよ、みたいなニュアンスのエラー文。console.log()の差し込むところが間違っているって事
+③$("#user-search-result").append(html);の下にconsole.log(html)
+→カリキュラム通りの表示がコンソールに出た
+
+failの確認は非同期の流れを切るようなミス(ajaxの中身をスペルミスなど)をすると「失敗しました」の表記が出せる
+
+【インクリメンタルサーチ後の実装】
+$()の意味 → ５つある https://ginpen.com/2012/12/01/jquery-core-func/
+ ①セレクタ②HTML③関数④要素オブジェクト⑤空
+ カスタムデータ属性...｢data-｣からはじまる任意の属性名を用いて、各HTMLの要素に対し独自の値を設定する
+                の取得 → .last()  とか???
+問題⑤
+$("調査範囲").on('click', ".子要素", function(){
+        console.log("イベント発火成功")
+      });
+input class ユーザーからデータを受け取るための
+type: "hidden"非表示データを送信する
+!= 右側の値と左側の値は違うならtrue
+haml - →ruby記述 分岐か定義してる
+%label. フォームの中でフォームの項目名と構成部品（チェックボックス、ラジオボタンなど）を関連付けるためのタグ
+        for属性の値と、フォーム部品のid属性の値を同じものにすることで両者を関連付ける
+attr  属性を取得したり設定することができるメソッド。引数１個で属性付与、引数２で属性変更
+$(document).on   Ajax通信で作成されたHTMLの情報を取得することができる → ？？？
+const → 定数にする宣言？目印？
+カスタムデータ属性...｢data-｣からはじまる任意の属性名を用いて、各HTMLの要素に対し独自の値を設定する
+               の取得 → .last()  とか???
+dom 親要素 取得 → document.getElementById('id名');みたいなやつのこと？
+.parent()メソッド → 親要素を取得する方法
+.remove()メソッド → 対象となる要素や子要素などを削除することができるメソッド

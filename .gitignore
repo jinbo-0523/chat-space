@@ -19,3 +19,4 @@
 public/uploads/*
 
 /GITINGNORE.memo/*
+config/secrets.yml
